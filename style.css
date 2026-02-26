@@ -1,10 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }*
-* {
-  transition: 
-    background-color 0.4s ease,
-    color 0.4s ease,
-    border-color 0.4s ease;
-}
+
+    html { scroll-behavior: smooth; }
+
 
     :root {
       --bg:      #EDE5D8;
@@ -31,8 +28,6 @@
       --muted: #A8A39B;
 }
 
-    html { scroll-behavior: smooth; }
-
     body {
       background: var(--bg);
       color: var(--text);
@@ -54,7 +49,7 @@
   z-index: 100;
 
   display: flex;
-  justify-content: center; /* keeps ul centered */
+  justify-content: center;
   align-items: center;
 
   padding: 1.1rem 2rem;
@@ -63,7 +58,7 @@
   border-bottom: 2px solid var(--accent);
 }
 
-    /* ✦ running-stitch border under nav */
+    /* stitch border under nav */
     nav::after {
       content: '';
       position: absolute;
@@ -79,7 +74,7 @@
 
     nav ul { list-style: none; display: flex; gap: 1rem; align-items: center; }
 
-    /* ✦ little flower ✿ between nav items */
+    /* flower between nav items */
     nav ul li.sep {
       color: var(--blush);
       font-size: 0.8rem;
@@ -107,8 +102,8 @@
       transform: scaleX(0);
       transition: transform 0.25s;
     }
-    nav a:hover { color: var(--blush); }
-    nav a:hover::after { transform: scaleX(1); }
+    nav ul li a:hover { color: var(--blush); }
+    nav ul li a:hover::after { transform: scaleX(1); }
 
     #theme-toggle {
   width: 38px;
@@ -133,10 +128,21 @@
     color 0.3s ease;
 }
 
-
-    /* ══════════════════════════════
-       BANNER
-    ══════════════════════════════ */
+    #lang-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  position: absolute;
+  right: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  text-decoration: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+    /* BANNER */
     #home {
       min-height: 100vh;
       display: flex;
@@ -147,7 +153,7 @@
       overflow: hidden;
     }
 
-    /* ✦ the spinning flower — sits to the right of the name */
+    /* spinning flower */
     .banner-flower {
       position: absolute;
       right: 8vw;
@@ -159,7 +165,7 @@
       pointer-events: none;
     }
 
-    /* La fleur tourne au scroll — géré par JS en bas de page */
+    /* Pour tourner au scroll */
     .flower-spin {
       transform-box: fill-box;
       transform-origin: center;
@@ -200,9 +206,7 @@
       animation: fadeUp 0.7s 0.75s forwards;
     }
 
-    /* ══════════════════════════════
-       BUTTONS
-    ══════════════════════════════ */
+    /* Bouttttttons */
     .btn {
       display: inline-block;
       padding: 0.85rem 2.2rem;
@@ -220,9 +224,7 @@
     .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--accent); }
     .btn-outline:hover { border-color: var(--main); color: var(--main); }
 
-    /* ══════════════════════════════
-       SECTIONS
-    ══════════════════════════════ */
+    /* SECTIONS */
     section { padding: 7rem 8vw; }
     .section-header { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 4rem; }
     .section-title {
@@ -235,16 +237,12 @@
     .section-line { flex: 1; height: 1px; background: var(--accent); max-width: 200px; opacity: 0.5; }
     .section-num { font-size: 0.72rem; letter-spacing: 0.2em; color: var(--main); text-transform: uppercase; }
 
-    /* ══════════════════════════════
-       STITCH DIVIDERS
-       Simple repeating pattern — easy to edit!
-    ══════════════════════════════ */
+    /* double stich dividers two colours */
     .stitch-divider {
       width: 100%;
       padding: 0.6rem 0;
       background: var(--bg);
       overflow: hidden;
-      /* ✦ two running-stitch lines with a gap between */
       background-image:
         repeating-linear-gradient(90deg, var(--main)   0, var(--main)   8px, transparent 8px, transparent 14px),
         repeating-linear-gradient(90deg, var(--accent)  0, var(--accent)  8px, transparent 8px, transparent 14px);
@@ -255,9 +253,7 @@
       opacity: 0.55;
     }
 
-    /* ══════════════════════════════
-       PROJECTS
-    ══════════════════════════════ */
+    /* Projets */
     #projects { background: var(--surface); position: relative; }
 
     .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
@@ -274,7 +270,7 @@
       justify-content: flex-end;
     }
 
-    /* hover fill */
+    /* fill project cards au hover */
     .project-card::before {
       content: '';
       position: absolute; inset: 0;
@@ -291,8 +287,7 @@
     .project-card:hover .project-tags span { color: var(--surface); }
     .project-card:hover .project-tags span { border-color: rgba(245,239,228,0.4); }
 
-    /* ✦ small embroidery motif in top-right corner of each card
-         These are simple inline SVGs — one per card, easy to swap! */
+    /* broderies sur chaque carte, 5 petal flower or cross stitch -- SVG sur html*/
     .card-emb {
       position: absolute !important;
       top: 1.2rem; right: 1.2rem;
@@ -309,9 +304,7 @@
     .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .project-tags span { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; border: 1px solid var(--accent); padding: 0.2rem 0.75rem; border-radius: 1px; color: var(--muted); }
 
-    /* ══════════════════════════════
-       ABOUT
-    ══════════════════════════════ */
+    /* A propos */
     #about {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -330,9 +323,29 @@
     .stat-num { font-family: var(--font-display); font-size: 3rem; color: var(--title); line-height: 1; }
     .stat-desc { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 0.3rem; line-height: 1.4; }
 
-    /* ══════════════════════════════
-       FOOTER
-    ══════════════════════════════ */
+    .photo-moi{
+      padding-bottom: 2em;
+      display: flex;
+      justify-content: center;
+  }
+
+.photo-moi img {
+  max-width: 13em;
+  border-radius: 50%;
+  border: 3px solid var(--bg);
+  display: block;
+}
+
+.photo-stitch {
+  border-radius: 50%;
+  padding: 6px;
+  border: 2px dashed var(--main);
+  /* ✦ second outer ring */
+  outline: 2px dashed var(--accent);
+  outline-offset: 6px;
+}
+
+    /* FOOTER */
     footer {
       background: var(--surface);
       padding: 4rem 8vw;
@@ -343,7 +356,7 @@
       gap: 2rem;
       position: relative;
     }
-    /* ✦ same running-stitch as nav, mirrored at top of footer */
+    /* même stitch que sous le nav */
     footer::before {
       content: '';
       position: absolute;
@@ -365,16 +378,12 @@
     .availability { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #5fde8a; margin-bottom: 1rem; }
     .availability::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #5fde8a; animation: pulse 2s infinite; }
 
-    /* ══════════════════════════════
-       ANIMATIONS
-    ══════════════════════════════ */
+    /* ANIMATIONS */
     @keyframes fadeUp  { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
     @keyframes fadeIn  { from { opacity:0; } to { opacity:1; } }
     @keyframes pulse   { 0%{box-shadow:0 0 0 0 rgba(95,222,138,0.6);} 70%{box-shadow:0 0 0 8px rgba(95,222,138,0);} 100%{box-shadow:0 0 0 0 rgba(95,222,138,0);} }
 
-    /* ══════════════════════════════
-       RESPONSIVE
-    ══════════════════════════════ */
+    /* RESPONSIVE */
     @media (max-width: 900px) { .banner-flower { display: none; } }
     @media (max-width: 768px) {
       #about { grid-template-columns: 1fr; gap: 3rem; }
@@ -383,3 +392,233 @@
       .footer-right { text-align: left; }
       .stat-row { grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* ══════════════════════════════
+   MODAL — Project detail overlay
+   Add data-* attributes to your
+   .project-card elements to populate
+══════════════════════════════ */
+
+/* Overlay background */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 20, 15, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Modal box */
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 860px;
+  max-height: 88vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  transform: translateY(24px);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.modal-overlay.is-open .modal {
+  transform: translateY(0);
+}
+
+/* Left column — scrollable preview */
+.modal-preview {
+  height: 88vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--accent);
+  background: var(--bg);
+  /* hide scrollbar but keep it functional */
+  scrollbar-width: thin;
+  scrollbar-color: var(--main) transparent;
+}
+
+.modal-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* placeholder when no image is provided */
+.modal-preview-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.25;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  color: var(--main);
+}
+
+/* Right column — text content */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--main) transparent;
+}
+
+.modal-num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--blush);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--title);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.modal-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.modal-tags span {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent);
+  padding: 0.2rem 0.75rem;
+  border-radius: 1px;
+  color: var(--muted);
+}
+
+.modal-desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.75;
+  flex: 1;
+}
+
+.modal-desc p + p {
+  margin-top: 0.8rem;
+}
+
+.modal-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--accent);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Visit / PDF button */
+.modal-btn {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.22s;
+  cursor: pointer;
+  background: var(--main);
+  color: var(--surface);
+  border: 1px solid var(--main);
+}
+
+.modal-btn:hover {
+  background: transparent;
+  color: var(--main);
+}
+
+.modal-btn.outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--accent);
+}
+
+.modal-btn.outline:hover {
+  border-color: var(--main);
+  color: var(--main);
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  z-index: 10;
+  transition: background 0.2s, color 0.2s;
+}
+
+.modal-close:hover {
+  background: var(--main);
+  color: var(--surface);
+}
+
+/* Stitch border accent at top of modal */
+.modal::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--main) 0px, var(--main) 8px,
+    transparent 8px, transparent 14px
+  );
+  opacity: 0.7;
+  z-index: 5;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .modal {
+    grid-template-columns: 1fr;
+    max-height: 92vh;
+  }
+  .modal-preview {
+    height: 220px;
+    border-right: none;
+    border-bottom: 1px solid var(--accent);
+  }
+}
