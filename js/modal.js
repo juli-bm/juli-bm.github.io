@@ -1,31 +1,3 @@
-// ══════════════════════════════
-// PROJECT CARD MODALS
-//
-// How to use:
-// Add these data attributes to each .project-card in your HTML:
-//
-//   data-num="01"
-//   data-title="Nom du projet"
-//   data-tags="UX, Figma, Research"
-//   data-desc="Description longue du projet. Peut contenir plusieurs phrases."
-//   data-img="images/mon-projet-fullpage.png"   ← screenshot pleine page (optionnel)
-//   data-link="https://monsite.com"             ← lien externe (optionnel)
-//   data-link-label="Visiter le site"           ← texte du bouton (optionnel, défaut: "Visiter")
-//   data-pdf="documents/maquette.pdf"           ← lien PDF (optionnel)
-//
-// Example:
-//   <div class="project-card"
-//        data-num="01"
-//        data-title="Esport Olympique"
-//        data-tags="HTML, CSS, Storytelling"
-//        data-desc="Projet réalisé en groupe de 5 dans le cadre du Master..."
-//        data-img="images/esport-fullpage.png"
-//        data-link="https://monprojet.com"
-//        data-link-label="Visiter le site">
-// ══════════════════════════════
-
-
-// ── Build modal HTML structure once ──────────────────────────
 const overlay = document.createElement('div');
 overlay.className = 'modal-overlay';
 overlay.innerHTML = `
