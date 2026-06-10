@@ -530,7 +530,7 @@ footer::before {
 
 /* point vert animé "Disponible" */
 .availability { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #5fde8a; margin-bottom: 1rem; }
-.availability::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #5fde8a; animation: pulse 2s infinite; }
+.availability::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #9EC28F; animation: pulse 2s infinite; }
 
 
 /* ============================================================
