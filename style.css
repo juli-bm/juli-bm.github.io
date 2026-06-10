@@ -73,13 +73,16 @@ footer a {
 
 :root {
   --bg:      #EDE5D8;
-  --main:    #C15A30;
-  --accent:  #F08378;
   --surface: #F5EFE4;
-  --leaf:    #7A9E6E;
-  --blush:   #d68f63;
-  --text:    #3B3A41;
-  --muted:   #8A7F76;
+
+  --main:    #A54824;   /* contraste OK */
+  --accent:  #B64A40;   /* ancien rose plus foncé */
+  --leaf:    #4D6E42;   /* vert accessible */
+  --blush:   #9A5D37;   /* terracotta accessible */
+
+  --text:    #2F2E34;
+  --muted:   #5F564F;
+
   --font-display: 'Abril Fatface', serif;
   --font-banner:  'Bebas Neue', sans-serif;
   --font-body:    'DM Sans', sans-serif;
@@ -87,17 +90,20 @@ footer a {
 
 
 /* ============================================================
-   🌸 4. DARK MODE
-   ↳ Activé via la classe .dark-mode sur <html> (js/theme.js)
+   🌙 DARK MODE
    ============================================================ */
 
 .dark-mode {
-  --bg:      #22201D;
+  --bg:      #1F1D1A;
   --surface: #2A2723;
-  --main:    #C97C4E;
-  --accent:  #F08378;
-  --text:    #E6E1D9;
-  --muted:   #A8A39B;
+
+  --main:    #E89A6C;
+  --accent:  #FF9B8F;
+  --leaf:    #9EC28F;
+  --blush:   #E1A37A;
+
+  --text:    #F4F0E8;
+  --muted:   #C6BFB5;
 }
 
 
