@@ -31,7 +31,8 @@
         </div>
 
         <div class="fr-header__tools">
-          <div class="fr-header__tools-links">
+          <button type="button" id="mobile-nav-toggle" class="fr-btn fr-btn--tertiary-no-outline fr-icon-menu-fill mobile-nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel" aria-label="Open menu" title="Menu"></button>
+          <div class="fr-header__tools-links" id="mobile-nav-panel">
             <ul class="fr-btns-group fr-btns-group--inline">
               <li>
                 <button class="fr-btn fr-btn--tertiary-no-outline fr-icon-sun-line" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme"></button>
@@ -46,11 +47,10 @@
           </div>
         </div>
 
-        <div class="fr-header__menu fr-modal" id="header-nav" aria-labelledby="header-nav-btn">
-          <div class="fr-container">
-            <button class="fr-link--close fr-link" aria-controls="header-nav">Close</button>
-          </div>
-        </div>
+        <!-- Required by DSFR's own header script (HeaderLinks), which reads/
+             mirrors .fr-header__tools-links into this element for mobile;
+             kept empty and hidden since this site uses its own burger menu. -->
+        <div class="fr-header__menu-links" hidden></div>
 
       </div>
     </div>

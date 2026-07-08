@@ -1,11 +1,59 @@
-/* This site has no burger-menu modal for the header tools (theme/language/
-   version toggle) — DSFR hides .fr-header__tools-links below its breakpoint
-   expecting them to live in that modal instead, so keep them visible always. */
+/* DSFR hides .fr-header__tools-links below its own "lg" breakpoint (992px),
+   expecting a native modal we don't use — so force it visible/inline above
+   our own smaller breakpoint, and route to the custom burger below it. */
 .fr-header__tools-links {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   gap: 0.5rem;
+}
+
+/* ===== Mobile burger menu (same interaction pattern as the creative portfolio) ===== */
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .mobile-nav-toggle {
+    display: inline-flex;
+    position: relative;
+    z-index: 1070;
+  }
+
+  .fr-header__menu--full-width,
+  .fr-header__tools-links {
+    display: none;
+  }
+
+  body.mobile-nav-open .fr-header__menu--full-width {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    background: var(--background-default-grey);
+  }
+
+  body.mobile-nav-open .fr-header__menu--full-width .fr-nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  body.mobile-nav-open .fr-header__menu--full-width .fr-nav__link {
+    font-size: 1.3rem;
+  }
+
+  body.mobile-nav-open .fr-header__tools-links {
+    display: flex;
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1060;
+  }
 }
 
 .hero-section {

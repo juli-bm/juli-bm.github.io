@@ -29,6 +29,30 @@
     themeToggle.classList.toggle('fr-icon-moon-line', isDark);
   }
 
+  /* Mobile burger menu: same open/close/icon-swap pattern as the creative portfolio */
+  var mobileNavToggle = document.getElementById('mobile-nav-toggle');
+  if (mobileNavToggle) {
+    var closeMobileNav = function () {
+      document.body.classList.remove('mobile-nav-open');
+      mobileNavToggle.setAttribute('aria-expanded', 'false');
+      mobileNavToggle.classList.add('fr-icon-menu-fill');
+      mobileNavToggle.classList.remove('fr-icon-close-line');
+      document.body.style.overflow = '';
+    };
+
+    mobileNavToggle.addEventListener('click', function () {
+      var isOpen = document.body.classList.toggle('mobile-nav-open');
+      mobileNavToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      mobileNavToggle.classList.toggle('fr-icon-menu-fill', !isOpen);
+      mobileNavToggle.classList.toggle('fr-icon-close-line', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    document.querySelectorAll('.fr-header__menu--full-width .fr-nav__link').forEach(function (link) {
+      link.addEventListener('click', closeMobileNav);
+    });
+  }
+
   /* Project cards open a shared detail modal populated from data-* attributes.
      DSFR renders .fr-modal via its own "disclosure" controller (aria-controls),
      not the native <dialog> show/close API, so we drive it through the hidden
