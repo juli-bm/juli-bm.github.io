@@ -227,6 +227,7 @@ nav ul li a:hover::after { transform: scaleX(1); }
 #dsfr-toggle {
   font-size: 1.1rem;
   line-height: 1;
+  justify-content: space-around;
 }
 
 /* burger — caché sur desktop, affiché via @media 600px */
