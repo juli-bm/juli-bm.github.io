@@ -7814,8 +7814,7 @@ h1 {
   max-width: 100%;
   text-transform: uppercase;
   border-radius: 0.25rem;
-  color: var(--purple-glycine-sun-319);
-  background-color: var(--purple-glycine-925-125);
+  color: var(--purple-glycine-main-494);
 
   --idle: transparent;
   --hover: var(--background-contrast-grey-hover);
