@@ -1,3 +1,13 @@
+/* This site has no burger-menu modal for the header tools (theme/language/
+   version toggle) — DSFR hides .fr-header__tools-links below its breakpoint
+   expecting them to live in that modal instead, so keep them visible always. */
+.fr-header__tools-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
 .hero-section {
   padding: 3rem 0 2.5rem;
 }
