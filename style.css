@@ -202,7 +202,8 @@ nav ul li a:hover { color: var(--surface); }
 nav ul li a:hover::after { transform: scaleX(1); }
 
 #theme-toggle,
-#lang-toggle {
+#lang-toggle,
+#dsfr-toggle {
   position: static;
   width: 38px;
   height: 38px;
@@ -221,6 +222,11 @@ nav ul li a:hover::after { transform: scaleX(1); }
 #lang-toggle svg {
   width: 100%;
   height: 100%;
+}
+
+#dsfr-toggle {
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 /* burger — caché sur desktop, affiché via @media 600px */

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-scheme="system">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juliette Mouillac — Portfolio 2026</title>
+  <link rel="stylesheet" href="css/dsfr.css">
+  <link rel="stylesheet" href="css/icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo_repu_mouillac.svg">
+</head>
+
+<body class="fr-body">
+
+<!-- ══════════════════════════════
+     HEADER DSFR
+══════════════════════════════ -->
+<header role="banner" class="fr-header">
+  <div class="fr-header__body">
+    <div class="fr-container">
+      <div class="fr-header__body-row">
+
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo">
+              <a href="#home" title="Juliette Mouillac — Retour à l'accueil" aria-label="Juliette Mouillac — Retour à l'accueil">
+                <img src="images/logo_repu_mouillac.svg" alt="Logo du DSFR" class="fr-logo">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              <li>
+                <button class="fr-btn fr-btn--tertiary-no-outline fr-icon-sun-line" id="theme-toggle" aria-label="Changer le thème" title="Changer le thème"></button>
+              </li>
+              <li>
+                <a class="fr-btn fr-btn--tertiary-no-outline fr-icon-translate-2" href="en/index.html" hreflang="en" lang="en" aria-label="Switch to English" title="Switch to English"></a>
+              </li>
+              <li>
+                <a class="fr-btn fr-btn--tertiary-no-outline fr-icon-palette-line" href="https://juli-bm.github.io/" aria-label="Voir la version créative de mon portfolio" title="Version créative"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fr-header__menu fr-modal" id="header-nav" aria-labelledby="header-nav-btn">
+          <div class="fr-container">
+            <button class="fr-link--close fr-link" aria-controls="header-nav">Fermer</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="fr-header__menu fr-header__menu--full-width">
+    <div class="fr-container">
+      <nav class="fr-nav" role="navigation" aria-label="Menu principal">
+        <ul class="fr-nav__list">
+          <li class="fr-nav__item"><a class="fr-nav__link" href="#home" aria-current="page">Accueil</a></li>
+          <li class="fr-nav__item"><a class="fr-nav__link" href="#projects">Projets</a></li>
+          <li class="fr-nav__item"><a class="fr-nav__link" href="#about">À Propos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<main>
+
+  <!-- ══════════════════════════════
+       HERO
+  ══════════════════════════════ -->
+  <section id="home" class="hero-section">
+    <div class="fr-container">
+      <p class="hero-label">Portfolio — 2026</p>
+      <h1 class="fr-display--sm">Juliette Mouillac — UX/UI Designer</h1>
+      <p class="fr-text--lead">En recherche de poste à partir de Septembre 2026 !</p>
+      <div class="fr-btns-group fr-btns-group--inline hero-cta-group">
+        <a href="#projects" class="fr-btn">Mes Projets</a>
+        <a href="#about" class="fr-btn fr-btn--secondary">À Propos de moi</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════
+       01. PROJETS
+  ══════════════════════════════ -->
+  <section id="projects" class="projects-section">
+    <div class="fr-container">
+
+      <div class="section-header">
+        <span class="section-num">01.</span>
+        <h2 class="fr-h2">Projets</h2>
+      </div>
+
+      <div class="fr-grid-row fr-grid-row--gutters">
+
+        <!-- 01 Scrappy -->
+        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+          <div class="fr-card fr-enlarge-link fr-card--no-arrow js-project-card"
+               role="button" tabindex="0"
+               data-num="01" data-title="Scrappy"
+               data-tags="Développement,HTML,CSS,JavaScript,PHP"
+               data-desc="Développement complet d'une application web. Scrappy est un réseau social de partage de balades, qui a pour objectif d'encourager les utilisateurs à sortir de chez eux et à découvrir de nouveaux endroits, en partageant leurs balades préférées avec la communauté. En groupe de 3 étudiants, développée de A à Z."
+               data-img="images/scrappy.gif" data-link="" data-link-label="Visiter le site">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">
+                  <span class="js-open-modal">Scrappy</span>
+                </h3>
+                <p class="fr-card__desc">Développement complet d'une application web de partage de balades.</p>
+              </div>
+              <div class="fr-card__footer">
+                <div class="card-tags-row">
+                  <span class="fr-tag fr-tag--sm">Développement</span>
+                  <span class="fr-tag fr-tag--sm">HTML</span>
+                  <span class="fr-tag fr-tag--sm">JavaScript</span>
+                  <span class="fr-tag fr-tag--sm">PHP</span>
+                </div>
+              </div>
+            </div>
+            <div class="fr-card__header">
+              <div class="fr-card__img-wrap">
+                <span class="fr-badge card-img-badge">Application Web</span>
+                <img src="images/capture_scrappy.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 Esport Olympique -->
+        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+          <div class="fr-card fr-enlarge-link fr-card--no-arrow js-project-card"
+               role="button" tabindex="0"
+               data-num="02" data-title="Esport Olympique"
+               data-tags="HTML,CSS,Storytelling"
+               data-desc="Et si l'Esport était une discipline olympique ? Projet réalisé en groupe de 5 dans le cadre du Master. Développement du storytelling autour du thème du sport. J'ai occupé le rôle de développeuse web."
+               data-img="images/esport-fullpage.webp" data-link="site_esport/index.html" data-link-label="Visiter le site">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">
+                  <span class="js-open-modal">Esport Olympique</span>
+                </h3>
+                <p class="fr-card__desc">Et si l'Esport était une discipline olympique ?</p>
+              </div>
+              <div class="fr-card__footer">
+                <div class="card-tags-row">
+                  <span class="fr-tag fr-tag--sm">HTML</span>
+                  <span class="fr-tag fr-tag--sm">CSS</span>
+                  <span class="fr-tag fr-tag--sm">Storytelling</span>
+                </div>
+              </div>
+            </div>
+            <div class="fr-card__header">
+              <div class="fr-card__img-wrap">
+                <span class="fr-badge card-img-badge">Site Web</span>
+                <img src="images/esport-fullpage.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 La La Langues -->
+        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+          <div class="fr-card fr-enlarge-link fr-card--no-arrow js-project-card"
+               role="button" tabindex="0"
+               data-num="03" data-title="La La Langues"
+               data-tags="WordPress,Gestion de projet,Figma,Maquettage"
+               data-desc="Site web réel pour un organisme de formation en langues basé à Bordeaux. De la charte graphique au développement WordPress, en passant par le maquettage. Cheffe de projet et développeuse web, en collaboration avec une équipe de 4 personnes."
+               data-img="images/wireframe-lalalangues.webp" data-link="https://lalalangues.com" data-link-label="Visiter le site">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">
+                  <span class="js-open-modal" aria-label="Voir La La Langues">La La Langues</span>
+                </h3>
+                <p class="fr-card__desc">Site web pour un organisme de formation en langues à Bordeaux.</p>
+              </div>
+              <div class="fr-card__footer">
+                <div class="card-tags-row">
+                  <span class="fr-tag fr-tag--sm">WordPress</span>
+                  <span class="fr-tag fr-tag--sm">Gestion de projet</span>
+                  <span class="fr-tag fr-tag--sm">Figma</span>
+                </div>
+              </div>
+            </div>
+            <div class="fr-card__header">
+              <div class="fr-card__img-wrap">
+                <span class="fr-badge card-img-badge">Site Web</span>
+                <img src="images/wireframe-lalalangues.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 The Mandalorian -->
+        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+          <div class="fr-card fr-enlarge-link fr-card--no-arrow js-project-card"
+               role="button" tabindex="0"
+               data-num="04" data-title="The Mandalorian"
+               data-tags="HTML,CSS,Storytelling"
+               data-desc="Mon premier projet HTML/CSS, réalisé en dernière année de licence LEA. Chacun devait choisir une série TV à représenter en gardant son atmosphère graphique. Grande fan de Star Wars, j'ai choisi The Mandalorian."
+               data-img="images/themandalorian-fullpage.webp" data-link="site_mando/Index.html" data-link-label="Visiter le site">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">
+                  <span class="js-open-modal" aria-label="Voir The Mandalorian">The Mandalorian</span>
+                </h3>
+                <p class="fr-card__desc">Mon premier projet HTML/CSS — site fan de la série Star Wars.</p>
+              </div>
+              <div class="fr-card__footer">
+                <div class="card-tags-row">
+                  <span class="fr-tag fr-tag--sm">HTML</span>
+                  <span class="fr-tag fr-tag--sm">CSS</span>
+                  <span class="fr-tag fr-tag--sm">Storytelling</span>
+                </div>
+              </div>
+            </div>
+            <div class="fr-card__header">
+              <div class="fr-card__img-wrap">
+                <span class="fr-badge card-img-badge">Site Web</span>
+                <img src="images/themandalorian-fullpage.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 Présentation développeur web -->
+        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+          <div class="fr-card fr-enlarge-link fr-card--no-arrow js-project-card"
+               role="button" tabindex="0"
+               data-num="05" data-title="Présentation développeur web"
+               data-tags="HTML,CSS"
+               data-desc="Support de présentation sur le métier de développeur web, conçu dans le cadre du cours Projet Professionnel Étudiant de mon Master. L'objectif était de créer un support HTML/CSS pour accompagner une présentation orale."
+               data-img="images/dev_web_gallery.webp" data-link="site_dev_web/accueil.html" data-link-label="Visiter le site">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">
+                  <span class="js-open-modal" aria-label="Voir Présentation développeur web">Présentation développeur web</span>
+                </h3>
+                <p class="fr-card__desc">Support HTML/CSS sur le métier de développeur web.</p>
+              </div>
+              <div class="fr-card__footer">
+                <div class="card-tags-row">
+                  <span class="fr-tag fr-tag--sm">HTML</span>
+                  <span class="fr-tag fr-tag--sm">CSS</span>
+                </div>
+              </div>
+            </div>
+            <div class="fr-card__header">
+              <div class="fr-card__img-wrap">
+                <span class="fr-badge card-img-badge">Site Web</span>
+                <img src="images/dev_web_gallery.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 Bloom & Brew -->
+        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+          <div class="fr-card fr-enlarge-link fr-card--no-arrow js-project-card"
+               role="button" tabindex="0"
+               data-num="06" data-title="Bloom &amp; Brew"
+               data-tags="Branding,Design"
+               data-desc="Création d'une identité visuelle pour une marque de café bio et éthique fictive."
+               data-img="images/bloom-brew-charte.webp" data-link="" data-link-label="">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">
+                  <span class="js-open-modal" aria-label="Voir Bloom &amp; Brew">Bloom &amp; Brew</span>
+                </h3>
+                <p class="fr-card__desc">Identité visuelle pour une marque de café bio fictive.</p>
+              </div>
+              <div class="fr-card__footer">
+                <div class="card-tags-row">
+                  <span class="fr-tag fr-tag--sm">Branding</span>
+                  <span class="fr-tag fr-tag--sm">Design</span>
+                </div>
+              </div>
+            </div>
+            <div class="fr-card__header">
+              <div class="fr-card__img-wrap">
+                <span class="fr-badge card-img-badge">Identité visuelle</span>
+                <img src="images/bloom-brew-charte.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 07 Landing page Roxy -->
+        <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
+          <div class="fr-card fr-enlarge-link fr-card--no-arrow js-project-card"
+               role="button" tabindex="0"
+               data-num="07" data-title="Landing page Roxy"
+               data-tags="WordPress,Storytelling"
+               data-desc="Projet de landing page réalisé dans le cadre d'un projet de licence. Création d'une landing page pour la nouvelle collection fictive d'un site de vente de vêtements en ligne, Roxy."
+               data-img="images/page_roxy.webp" data-link="" data-link-label="">
+            <div class="fr-card__body">
+              <div class="fr-card__content">
+                <h3 class="fr-card__title">
+                  <span class="js-open-modal" aria-label="Voir Landing page Roxy">Landing page Roxy</span>
+                </h3>
+                <p class="fr-card__desc">Landing page fictive pour une nouvelle collection de la marque Roxy.</p>
+              </div>
+              <div class="fr-card__footer">
+                <div class="card-tags-row">
+                  <span class="fr-tag fr-tag--sm">WordPress</span>
+                  <span class="fr-tag fr-tag--sm">Storytelling</span>
+                </div>
+              </div>
+            </div>
+            <div class="fr-card__header">
+              <div class="fr-card__img-wrap">
+                <span class="fr-badge card-img-badge">Landing Page</span>
+                <img src="images/page_roxy.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════
+       02. À PROPOS
+  ══════════════════════════════ -->
+  <section id="about" class="about-section">
+    <div class="fr-container">
+
+      <div class="section-header">
+        <span class="section-num">02.</span>
+        <h2 class="fr-h2">À Propos</h2>
+      </div>
+
+      <div class="fr-grid-row fr-grid-row--gutters">
+
+        <!-- Texte -->
+        <div class="fr-col-12 fr-col-md-7">
+          <p>
+            Étudiante en master Web éditorial et stratégie UX, je m'intéresse à la conception d'expériences numériques accessibles, utiles et adaptées aux besoins des utilisateurs.
+          </p>
+          <p>
+            Mon intérêt pour le numérique s'accompagne d'une curiosité plus large pour les domaines créatifs. Le design, les arts, l'architecture et les jeux vidéo constituent autant de sources d'inspiration qui nourrissent ma pratique de l'UX et de l'UI design.
+          </p>
+          <p>
+            À travers mes projets, je cherche à concilier analyse des besoins, accessibilité et qualité de l'expérience utilisateur afin de concevoir des interfaces à la fois fonctionnelles et agréables à utiliser.
+          </p>
+          <div class="fr-btns-group fr-btns-group--inline about-cta-group">
+            <a href="#projects" class="fr-btn">Mes Projets</a>
+            <a href="pdf/cv_juliette_mouillac.pdf" class="fr-btn fr-btn--secondary" target="_blank" rel="noopener">Mon CV</a>
+          </div>
+        </div>
+
+        <!-- Photo + compétences -->
+        <div class="fr-col-12 fr-col-md-5">
+          <div class="about-right-inner">
+            <img src="images/juli_bg.webp" alt="Photo de Juliette Mouillac" class="about-photo">
+            <div>
+              <p class="skills-label">Compétences et outils</p>
+              <div class="skills-tags">
+                <span class="fr-tag fr-tag--sm">Figma</span>
+                <span class="fr-tag fr-tag--sm">HTML</span>
+                <span class="fr-tag fr-tag--sm">CSS/SCSS</span>
+                <span class="fr-tag fr-tag--sm">JavaScript</span>
+                <span class="fr-tag fr-tag--sm">PHP</span>
+                <span class="fr-tag fr-tag--sm">TWIG</span>
+                <span class="fr-tag fr-tag--sm">Visual Studio Code</span>
+                <span class="fr-tag fr-tag--sm">GitHub</span>
+                <span class="fr-tag fr-tag--sm">WordPress</span>
+                <span class="fr-tag fr-tag--sm">Symfony</span>
+                <span class="fr-tag fr-tag--sm">Docker</span>
+                <span class="fr-tag fr-tag--sm">RGAA 4.1.2</span>
+                <span class="fr-tag fr-tag--sm">DSFR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ══════════════════════════════
+     FOOTER DSFR
+══════════════════════════════ -->
+<footer class="fr-footer" role="contentinfo" id="footer">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+
+      <div class="fr-footer__brand fr-enlarge-link">
+        <a href="#home" title="Retour à l'accueil" class="fr-footer__brand-link" aria-label="Juliette Mouillac — Retour à l'accueil">
+          <img src="images/logo_repu_mouillac.svg" alt="Logo du DSFR" class="fr-logo">
+        </a>
+      </div>
+
+      <div class="fr-footer__content">
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a class="fr-footer__content-link" href="mailto:mouillacjuliette@gmail.com">
+              mouillacjuliette@gmail.com
+            </a>
+          </li>
+          <li class="fr-footer__content-item">
+            <a class="fr-footer__content-link" href="https://www.linkedin.com/in/juliette-mouillac/" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/juliette-mouillac/
+            </a>
+          </li>
+          <li class="fr-footer__content-item">
+            <a class="fr-footer__content-link" href="https://github.com/juli-bm" target="_blank" rel="noopener noreferrer">
+              github.com/juli-bm
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" href="#">Accessibilité : partiellement conforme</a>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>© 2026 Juliette Mouillac</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════
+     MODALE projet (fr-modal)
+══════════════════════════════ -->
+
+<!-- Bouton d'ouverture statique (masqué visuellement).
+     Présent dès le chargement pour que le DSFR l'enregistre à l'init
+     comme déclencheur de la modale (disclosure via aria-controls). -->
+<button type="button"
+        id="project-modal-trigger"
+        class="fr-sr-only"
+        data-fr-opened="false"
+        aria-controls="project-modal"
+        tabindex="-1"
+        aria-hidden="true">Ouvrir la fiche projet</button>
+
+<dialog id="project-modal" class="fr-modal" aria-labelledby="modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-8 fr-col-lg-6">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button aria-controls="project-modal" title="Fermer" type="button" class="fr-btn--close fr-btn" id="modal-close-btn">Fermer</button>
+          </div>
+          <div class="fr-modal__content">
+            <p class="fr-text--sm fr-text--mention" id="modal-num"></p>
+            <h3 id="modal-title" class="fr-modal__title"></h3>
+            <img id="modal-img" src="" alt="" class="fr-responsive-img" style="margin-bottom:1rem; display:none;">
+            <p id="modal-desc" style="white-space:pre-line;"></p>
+            <div id="modal-tags" class="modal-tags"></div>
+            <a id="modal-link" href="#" class="fr-btn" target="_blank" rel="noopener" style="display:none;">Visiter le site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script src="js/dsfr.module.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
