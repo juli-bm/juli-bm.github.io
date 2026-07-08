@@ -228,6 +228,15 @@ nav ul li a:hover::after { transform: scaleX(1); }
   font-size: 1.1rem;
   line-height: 1;
   justify-content: space-around;
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  transition: background 0.2s, color 0.2s;
+}
+
+#dsfr-toggle:hover {
+  background: var(--accent);
+  color: var(--surface);
 }
 
 /* burger — caché sur desktop, affiché via @media 600px */

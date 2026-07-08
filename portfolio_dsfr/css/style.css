@@ -8,6 +8,17 @@
   gap: 0.5rem;
 }
 
+/* ===== Lien vers la version créative : bordure colorée pour le distinguer des autres outils (thème, langue) ===== */
+#creative-toggle {
+  box-shadow: inset 0 0 0 2px var(--text-action-high-blue-france);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#creative-toggle:hover {
+  background-color: var(--text-action-high-blue-france);
+  color: var(--text-inverted-blue-france, #fff);
+}
+
 /* ===== Mobile burger menu (same interaction pattern as the creative portfolio) ===== */
 .mobile-nav-toggle {
   display: none;
