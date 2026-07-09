@@ -8,17 +8,20 @@
   gap: 0.5rem;
 }
 
-/* ===== Lien vers la version créative : fond bleu pâle (couleur officielle DSFR) pour le distinguer des autres outils (thème, langue) ===== */
+/* ===== Lien vers la version créative : pastille bleu pâle (couleur officielle DSFR) + libellé, pour le distinguer des autres outils icône-seule (thème, langue) ===== */
 #creative-toggle {
-  border-radius: 100%;
+  border-radius: 999px;
   background-color: var(--background-action-low-blue-france);
   box-shadow: none;
-  transition: background-color 0.2s, transform 0.2s;
+  font-weight: 700;
+  transition: background-color 0.25s, color 0.25s, transform 0.25s, box-shadow 0.25s;
 }
 
 #creative-toggle:hover {
-  background-color: var(--background-action-low-blue-france-hover);
+  background-color: var(--text-action-high-blue-france);
+  color: var(--text-inverted-blue-france, #fff);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px -2px color-mix(in srgb, var(--text-action-high-blue-france) 45%, transparent);
 }
 
 /* ===== Mobile burger menu (same interaction pattern as the creative portfolio) ===== */

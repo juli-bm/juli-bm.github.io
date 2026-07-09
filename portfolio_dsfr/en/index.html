@@ -35,13 +35,23 @@
           <div class="fr-header__tools-links" id="mobile-nav-panel">
             <ul class="fr-btns-group fr-btns-group--inline">
               <li>
-                <button class="fr-btn fr-btn--tertiary-no-outline fr-icon-sun-line" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme"></button>
+                <button class="fr-btn fr-btn--tertiary-no-outline fr-icon-theme-fill" aria-controls="fr-theme-modal" data-fr-opened="false" type="button" aria-label="Display settings" title="Display settings"></button>
               </li>
               <li>
-                <a class="fr-btn fr-btn--tertiary-no-outline fr-icon-translate-2" href="../index.html" hreflang="fr" lang="fr" aria-label="Switch to French" title="Switch to French"></a>
+                <div class="fr-translate fr-nav">
+                  <div class="fr-nav__item">
+                    <button class="fr-translate__btn fr-btn fr-btn--tertiary" aria-controls="translate-menu" aria-expanded="false" title="Select a language" type="button">EN<span class="fr-hidden-lg">&nbsp;- English</span></button>
+                    <div class="fr-collapse fr-translate__menu fr-menu" id="translate-menu">
+                      <ul class="fr-menu__list">
+                        <li><a class="fr-translate__language fr-nav__link" hreflang="fr" lang="fr" href="../index.html">FR - Français</a></li>
+                        <li><a class="fr-translate__language fr-nav__link" hreflang="en" lang="en" href="index.html" aria-current="true">EN - English</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li>
-                <a class="fr-btn fr-btn--tertiary fr-icon-palette-line" id="creative-toggle" href="https://juli-bm.github.io/" aria-label="See the creative version of my portfolio" title="Creative version"></a>
+                <a class="fr-btn fr-btn--tertiary fr-btn--icon-left fr-icon-palette-line" id="creative-toggle" href="https://juli-bm.github.io/" aria-label="See the creative version of my portfolio" title="Creative version">Creative</a>
               </li>
             </ul>
           </div>
@@ -469,6 +479,54 @@
             <p id="modal-desc" style="white-space:pre-line;"></p>
             <div id="modal-tags" class="modal-tags"></div>
             <a id="modal-link" href="#" class="fr-btn" target="_blank" rel="noopener" style="display:none;">Visit site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- ══════════════════════════════
+     THEME MODAL (official DSFR fr-modal)
+══════════════════════════════ -->
+<dialog id="fr-theme-modal" class="fr-modal" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button aria-controls="fr-theme-modal" title="Close" type="button" class="fr-btn--close fr-btn">Close</button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title">Display settings</h1>
+            <div id="fr-display" class="fr-display">
+              <fieldset class="fr-fieldset" id="display-fieldset">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                  Choose a theme to customize the site's appearance.
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-light">Light theme</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-dark">Dark theme</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                    <label class="fr-label" for="fr-radios-theme-system">
+                      System
+                      <span class="fr-hint-text">Uses system settings</span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
           </div>
         </div>
       </div>

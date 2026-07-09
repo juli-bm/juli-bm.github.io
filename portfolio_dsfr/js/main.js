@@ -1,33 +1,9 @@
 (function () {
   'use strict';
 
-  /* Theme toggle: DSFR reads document.documentElement[data-fr-theme] */
-  var themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    var root = document.documentElement;
-    var stored = localStorage.getItem('theme');
-    if (stored === 'dark' || stored === 'light') {
-      root.setAttribute('data-fr-theme', stored);
-    }
-    updateThemeIcon();
-
-    themeToggle.addEventListener('click', function () {
-      var current = root.getAttribute('data-fr-theme');
-      var isDark = current
-        ? current === 'dark'
-        : window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var next = isDark ? 'light' : 'dark';
-      root.setAttribute('data-fr-theme', next);
-      localStorage.setItem('theme', next);
-      updateThemeIcon();
-    });
-  }
-
-  function updateThemeIcon() {
-    var isDark = document.documentElement.getAttribute('data-fr-theme') === 'dark';
-    themeToggle.classList.toggle('fr-icon-sun-line', !isDark);
-    themeToggle.classList.toggle('fr-icon-moon-line', isDark);
-  }
+  /* Theme switching (light/dark/system) is now handled natively by DSFR's
+     own core JS via the official #fr-theme-modal + fr-radios-theme radio
+     group — no custom wiring needed here. */
 
   /* Mobile burger menu: same open/close/icon-swap pattern as the creative portfolio */
   var mobileNavToggle = document.getElementById('mobile-nav-toggle');
