@@ -1,0 +1,187 @@
+/* DSFR hides .fr-header__tools-links below its own "lg" breakpoint (992px),
+   expecting a native modal we don't use — so force it visible/inline above
+   our own smaller breakpoint, and route to the custom burger below it. */
+.fr-header__tools-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Lien vers la version créative : pastille bleu pâle (couleur officielle DSFR) */
+#creative-toggle {
+  border-radius: 999px;
+  background-color: var(--background-action-low-blue-france);
+  box-shadow: none;
+  font-weight: 700;
+  transition: background-color 0.25s, color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+#creative-toggle:hover {
+  background-color: var(--text-action-high-blue-france);
+  color: var(--text-inverted-blue-france, #fff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px -2px color-mix(in srgb, var(--text-action-high-blue-france) 45%, transparent);
+}
+
+/* Mobile burger menu */
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .mobile-nav-toggle {
+    display: inline-flex;
+    position: relative;
+    z-index: 1070;
+  }
+
+  .fr-header__menu--full-width,
+  .fr-header__tools-links {
+    display: none;
+  }
+
+  body.mobile-nav-open .fr-header__menu--full-width {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    background: var(--background-default-grey);
+  }
+
+  body.mobile-nav-open .fr-header__menu--full-width .fr-nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  body.mobile-nav-open .fr-header__menu--full-width .fr-nav__link {
+    font-size: 1.3rem;
+  }
+
+  body.mobile-nav-open .fr-header__tools-links {
+    display: flex;
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1060;
+  }
+}
+
+.hero-section {
+  padding: 3rem 0 2.5rem;
+}
+.hero-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-mention-grey);
+  margin-bottom: 0.75rem;
+}
+.hero-cta-group {
+  margin-top: 2rem;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-default-grey);
+}
+.section-num {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-mention-grey);
+}
+.section-header h2 {
+  margin: 0;
+}
+.projects-section {
+  padding: 3rem 0;
+}
+
+/* project cards double as buttons opening the detail modal */
+.js-project-card {
+  cursor: pointer;
+}
+.js-project-card:focus-visible {
+  outline: 2px solid var(--border-active-blue-france);
+  outline-offset: 2px;
+}
+
+.about-section {
+  padding: 3rem 0;
+  background: var(--background-alt-grey);
+}
+.about-cta-group {
+  margin-top: 1.5rem;
+}
+.about-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.skills-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-mention-grey);
+  margin-bottom: 0.75rem;
+}
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+/* card image placeholder height */
+.fr-card__img-wrap {
+  position: relative;
+  min-height: 140px;
+  background: var(--background-contrast-grey);
+  overflow: hidden;
+}
+.fr-card__img-wrap img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  object-position: top;
+}
+.card-img-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1;
+  background-color: var(--purple-glycine-950-100);
+}
+.card-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 0.5rem 1.25rem 1rem;
+}
+
+/* About right column layout */
+.about-right-inner {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* project detail modal */
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
